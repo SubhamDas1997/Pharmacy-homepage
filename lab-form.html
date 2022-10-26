@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slot booking</title>
+    <link rel="stylesheet" href="./styles/lab-form-style.css" />
+  </head>
+  <body>
+    <section class="form-container">
+      <h1>SLOT BOOKING FORM</h1>
+      <div class="wrapper">
+        <div class="form">
+          <form action="#">
+            <article>
+              <h2>1. Please fill your contact details here</h2>
+              <div class="form-input">
+                <input
+                  type="text"
+                  title="fullName"
+                  placeholder="Full Name"
+                  required
+                />
+                <input
+                  type="number"
+                  title="patient_id"
+                  placeholder="Patient ID if exists"
+                />
+                <input
+                  type="number"
+                  title="contant_number"
+                  placeholder="Contact Number"
+                  min="6000000000"
+                  max="9999999999"
+                  required
+                />
+                <input
+                  type="email"
+                  title="email"
+                  placeholder="Email id"
+                  required
+                />
+              </div>
+            </article>
+
+            <article>
+              <h2>2. Please fill in your address</h2>
+              <div class="form-input">
+                <input
+                  type="text"
+                  title="house_number"
+                  placeholder="H-No"
+                  required
+                />
+                <input
+                  type="text"
+                  title="street"
+                  placeholder="Street"
+                  required
+                />
+                <input type="text" title="area" placeholder="Area" required />
+                <div>
+                  <p>District</p>
+                  <select name="District" id="district">
+                    <option value="">Choose</option>
+                    <option value="Barasat">Barasat</option>
+                    <option value="Dum_Dum">Dum Dum</option>
+                    <option value="Salt_lake">Salt Lake</option>
+                    <option value="Madhyamgram">Madhyamgram</option>
+                    <option value="Birati">Birati</option>
+                  </select>
+                </div>
+              </div>
+            </article>
+
+            <article>
+              <h2>3. Please choose your test type(s)</h2>
+              <p>Check atleast one box without fail</p>
+              <input type="checkbox" id="t1" name="test1" value="CBC" />
+              <label for="t1">CBC</label>
+              <br />
+              <input
+                type="checkbox"
+                id="t2"
+                name="test2"
+                value="Complete Urine"
+              />
+              <label for="t2">Complete Urine</label>
+              <br />
+              <input
+                type="checkbox"
+                id="t3"
+                name="test3"
+                value="Lipid Profile"
+              />
+              <label for="t3">Lipid Profile</label>
+              <br />
+              <input
+                type="checkbox"
+                id="t4"
+                name="test4"
+                value="Thyroid Stimulating Hormone(TSH)"
+              />
+              <label for="t4">Thyroid Stimulating Hormone(TSH)</label>
+              <br />
+              <input
+                type="checkbox"
+                id="t5"
+                name="test5"
+                value="Glucose Test"
+              />
+              <label for="t5">Glucose Test</label>
+              <br />
+            </article>
+
+            <article>
+              <h2>Do you want a hard copy of the report?</h2>
+              <input
+                type="radio"
+                id="radio1"
+                name="option"
+                value="True"
+                required
+              />
+              <label for="radio1">Yes</label>
+              <br />
+              <input type="radio" id="radio2" name="option" value="False" />
+              <label for="radio2">No</label>
+              <br />
+            </article>
+
+            <article>
+              <h2>Please select your appropriate date and time</h2>
+              <input
+                type="datetime-local"
+                name="date_time"
+                id="dateTime"
+                required
+              />
+            </article>
+          </form>
+        </div>
+        <div class="image-wrap">
+          <div class="image" />
+        </div>
+      </div>
+    </section>
+
+    <div id="button-container">
+      <button type="reset" id="reset">RESET</button>
+      <button type="submit" id="submit">SUBMIT</button>
+    </div>
+  </body>
+</html>
